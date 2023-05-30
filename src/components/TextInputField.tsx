@@ -1,5 +1,5 @@
 import {TextInput, StyleSheet, View, Text} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 interface Props {
   type: any;
@@ -15,6 +15,8 @@ const TextInputField: React.FC<Props> = ({
   error,
 }): JSX.Element => {
   const [keyboardInputType, setKeyBoardInputType] = useState('default');
+
+  //const inputType = useMemo(() => {});
 
   useEffect(() => {
     switch (type) {

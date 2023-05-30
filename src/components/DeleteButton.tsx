@@ -10,16 +10,12 @@ type DeleteButtonProps = {
   item: BusinessCard;
 };
 
-const deleteHandler = () => {
-  console.log('Delete button');
-};
-
 const DeleteButton: React.FC<Props> = ({}: DeleteButtonProps): JSX.Element => {
-  //   const dispatch: AppDispatch = useDispatch();
+  //const dispatch: AppDispatch = useDispatch();
 
-  //   const deleteHandler = () => {
-  //     dispatch(deleteBusinessCard(item));
-  //   };
+  const deleteHandler = () => {
+    //dispatch(deleteBusinessCard(item));
+  };
 
   return (
     <View style={styles.rowBack}>

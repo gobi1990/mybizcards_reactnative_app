@@ -44,11 +44,10 @@ export const deleteBusinessCard = (card: BusinessCard) => {
     try {
       const cards = getState().cardReducer.cards;
       cards.filter(item => item.id !== card.id);
-      const newCards = [...cards, card];
-      await AsyncStorage.setItem('businessCards', JSON.stringify(newCards));
+      await AsyncStorage.setItem('businessCards', JSON.stringify(cards));
       dispatch({
         type: ActionTypes.REMOVE_BUSINESS_CARD,
-        payload: newCards,
+        payload: cards,
       });
     } catch (error) {
       console.log('Error removing a business card: ', error);
